@@ -12,8 +12,8 @@
       return false;
     });
 
-    //ページトップボタン
-    $(window).on('scroll',function(){
+    //ページスクロール
+    var onpagescroll = function(){
       var $html = $('html');
       var scr = $(window).scrollTop();
       var scrH = scr + $(window).outerHeight();
@@ -29,6 +29,17 @@
       }else if($html.hasClass('page-top-fixed') === true && scr < 400){
         $html.removeClass('page-top-fixed');
       }
+    };
+    $(window).on('scroll',function(){
+      onpagescroll();
+    });
+
+    //ページトップボタン
+    $(document).on('click','.page-top',function(){
+      $('html,body').stop().animate({
+        scrollTop: 0
+      });
+      return false;
     });
 
   });

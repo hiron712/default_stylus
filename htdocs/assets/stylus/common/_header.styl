@@ -1,5 +1,12 @@
 #header
 	background-color #eeeeee
+	position fixed
+	left 0
+	right 0
+	top 0
+	html.menuOpen &
+		+sp()
+			z-index 2
 	.headerInr
 		max-width 1200px
 		margin 0 auto
@@ -15,7 +22,7 @@
 		background-color #dddddd
 	.navWrap
 		+sp()
-			position absolute
+			position fixed
 			z-index -1
 			left 0
 			right 0
