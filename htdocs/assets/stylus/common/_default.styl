@@ -2,12 +2,58 @@ html
 	margin-top 112px
 	+sp()
 		margin-top 48px
+		px(14)
 body
 	overflow-x hidden
 	html.menuOpen &
 		overflow hidden
+
+for num in (0..40)
+	.mt{num * 5}
+		margin-top: (num * 5)px !important
+for num in (0..40)
+	.mb{num * 5}
+		margin-bottom: (num * 5)px !important
+for num in (0..40)
+	.pt{num * 5}
+		padding-top: (num * 5)px !important
+for num in (0..40)
+	.pb{num * 5}
+		padding-bottom: (num * 5)px !important
+for num in (10..60)
+	.font{num}
+		px((num))
+
+.PC
+	display block !important
+	+sp()
+		display none !important
+.SP
+	display none !important
+	+sp()
+		display block !important
+
 a
 	color #333333
 	text-decoration none
 	&:hover
 		text-decoration underline
+
+button
+	border none
+	appearance none
+	transition()
+	&:hover
+		opacity 0.7
+
+#main
+	max-width 1200px
+	min-height 100vh
+	margin 0 auto
+	padding 30px 0
+
+
+section.block
+	+sp()
+		padding-left 3%
+		padding-right 3%

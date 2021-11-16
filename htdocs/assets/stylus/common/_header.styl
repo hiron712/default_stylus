@@ -1,6 +1,7 @@
 #header
 	background-color #eeeeee
 	position fixed
+	z-index 10
 	left 0
 	right 0
 	top 0
@@ -20,6 +21,7 @@
 		display block
 		width 200px
 		background-color #dddddd
+		height 48px
 	.navWrap
 		+sp()
 			position fixed
@@ -42,11 +44,13 @@
 		position absolute
 		top 0
 		right 0
+		list-style-none()
 		+sp()
 			display block
 			position relative
 		px(14)
 		li
+			list-style none
 			a
 				display block
 				padding 10px
@@ -55,6 +59,7 @@
 		ul
 			display flex
 			justify-content space-between
+			list-style-none()
 			+sp()
 				display block
 		li
