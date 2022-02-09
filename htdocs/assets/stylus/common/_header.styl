@@ -77,9 +77,17 @@
 				top 100%
 				background-color #dddddd
 				transition()
+				+sp()
+					position relative
+					display none
+					z-index 1
+					opacity 1
+					visibility visible
 				ul
 					justify-content flex-start
 					position relative
+					+sp()
+						display block
 					&:before
 						content ""
 						position absolute
@@ -90,12 +98,16 @@
 						bottom 0
 						background-color #dddddd
 						display block
+						+sp()
+							display none
 			&:hover
 				.sub
 					display block
 					visibility visible
 					z-index 2
 					opacity 1
+					+sp()
+						display none
 
 	.menu
 		position absolute

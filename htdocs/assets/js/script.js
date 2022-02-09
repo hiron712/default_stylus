@@ -79,7 +79,7 @@
     if($('#header .menu').css('display') === 'none'){
       var slider;
       slider = $('#main .carousel');
-      slider.slick({
+      slider.not('.slick-initialized').slick({
         dots: true,
         autoplay: false,
         arrows: true,
@@ -96,7 +96,7 @@
         swipeToSlide: true
       });
     }else{
-      $('#main .carousel').slick('unslick');
+      $('#main .carousel.slick-initialized').slick('unslick');
     }
 
   }
